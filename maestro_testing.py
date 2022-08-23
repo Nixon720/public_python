@@ -11,9 +11,9 @@ def run_process(process):
 
 if __name__ == '__main__':
     print("Running maestro main")
-    with Pool(processes=3) as pool:
+    with Pool(processes=4) as pool:
         print("In pool")
         try:
-            pool.imap_unordered(run_process, processes)
+            pool.map(run_process, processes)
         except Exception as excpt:
             print(excpt)

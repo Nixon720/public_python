@@ -1,6 +1,6 @@
 import subprocess
 import time
-
+print("In script 1")
 
 # def main1():
 #     print("I am in script 1")
@@ -8,11 +8,14 @@ import time
 #         print(f"Script 1: Index {i}")
 #         time.sleep(1)
 
-def main2():
+# def main2():
+if __name__ == '__main__':
     with open('printing1.txt', 'a') as file:
         for i in range(15):
-            file.write(f"Script 1: {i}")
-    file.write("EOF Script 1")
+            print(f"Script 1: {i}\n")
+            file.write(f"Script 1: {i}\n")
+        print("EOF Script 1\n")
+        file.write("EOF Script 1\n")
 
 
 # if __name__ == '__main__':
@@ -20,5 +23,5 @@ def main2():
 #     for i in range(1000):
 #         print(f"Script 1: Index {i}")
 # main()
-print("In script 1")
+
 # subprocess.run(["dir"], shell=True)
